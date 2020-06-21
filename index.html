@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/style.css'/>
+  <title>Authorization Form</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form">
+      <label class='tab active authorization' title='authorization'>Авторизация</label>
+      <label class='tab registration' title='registration'>Регистрация</label>
+      <div class="tabs">
+        <div class="tab-form active">
+          <form class='tab-form1' role='form'>
+                <label for='email'>Введите E-mail</label>
+                <input class='input' type='email' id='email' name='email'>
+                <br>
+                <label for='password'>Введите пароль</label>
+                <input class='input' type='password' id='password' name='password'>
+                <input type="submit" name="button" class='button' value="Вход" />
+              <ul class="social">
+                <li><a href='/'><i class="fa fa-facebook"></i></a></li>
+                <li><a href='/'><i class="fa fa-twitter"></i></a></li>
+                <li><a href='/'><i class="fa fa-instagram"></i></a></li>
+                <li><a href='/'><i class="fa fa-vk"></i></a></li>
+                <li><a href='/'><i class="fa fa-youtube"></i></a></li>
+              </ul>
+              <a id='forgot-password-btn' href="/">Забыли пароль?</a>
+          </form>
+          <form class="tab-form3">
+            <label for='forgot-password'>Введите Ваш Email:</label>
+            <input class="input" type='email' id='forgot-password' name='email'>
+            <input type='submit' name='submit' class='button' id='forgot-password-submit' value='Отправить'>
+          </form>
+        </div>
+       <div class="tab-form">
+        <form class="tab-form2" role='form' method="POST" name='form'>
+  
+          <label for='reg-email'>Введите E-mail</label>
+          <input class='input' type='email' id='reg-email' name='reg_email'>
+          <br>
+          <label for='reg-name'>Введите Ваше имя</label>
+          <input class='input' type='text' id='reg-name' name='reg_name'>
+          <br>
+          <label for='reg-phone'>Введите Ваш номер телефона</label>
+          <input class='input' type='text' id='reg-phone' name='reg_phone'>
+          <br>
+          <label for='reg-password'>Введите пароль</label>
+          <input class='input' type='password' id='reg-password' name='reg_password'>
+          <br>
+          <label for='reg-repeat-password'>Повторите пароль</label>
+          <input class='input' type='password' id='reg-repeat-password' name='reg_repeat_password'>
+          <div id="error-password"></div>
+  
+          <input id="checkbox" type="checkbox" name="checkbox" onchange="document.getElementById('submit').disabled = !this.checked;" />
+          <label for="checkbox">Ознакомлен(-а) и принимаю <a href='/'>условия регистрации</a></label>    
+          <input type="submit" disabled="disabled" name="submit" class='button' id="submit" value="Регистрация" />
+        
+        </form>
+       </div>
+      </div>
+     
+    </div>
+  </div>  
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <script src='js/jquery.maskedinput.min.js'></script>
+  <script src='js/script.js'></script>
+</body>
+</html>
